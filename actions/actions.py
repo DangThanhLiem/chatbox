@@ -48,68 +48,68 @@ class action_return_menu(Action):
         return []
 
 
-ALLOWED_TEA_SIZES = ["M", "L"]
+ALLOWED_FOOD_SIZES = ["M", "L"]
 
 
 
-# validator tea form
-class ValidateTeaForm(FormValidationAction):
+# validator food form
+class ValidatefoodForm(FormValidationAction):
     def name(self) -> Text:
-        return "validate_tea_form"
+        return "validate_food_form"
     
-    def validate_tea_type(
+    def validate_food_type(
         self,
         slot_value: Any,
         dispatcher: CollectingDispatcher,
         tracker: Tracker,
         domain: DomainDict,
     ) -> Dict[Text, Any]:
-        """Validate `tea_type` value."""
+        """Validate `food_type` value."""
             
         menu = Item().getAllItem()
-        ALLOWED_TEA_TYPES = []
+        ALLOWED_FOOD_TYPES = []
         for i in menu:
-            ALLOWED_TEA_TYPES.append(i[1])
+            ALLOWED_FOOD_TYPES.append(i[1])
 
-        if slot_value.lower() not in ALLOWED_TEA_TYPES:
+        if slot_value.lower() not in ALLOWED_FOOD_TYPES:
             dispatcher.utter_message(text=f"Xin lỗi quý khách, quán mình chưa phục vụ {slot_value} ạ")
-            return {"tea_type": None}
+            return {"food_type": None}
         dispatcher.utter_message(text=f"Xác nhận bạn muốn dùng {slot_value}.")
-        return {"tea_type": slot_value}
+        return {"food_type": slot_value}
     
-    def validate_tea_size(
+    def validate_food_size(
         self,
         slot_value: Any,
         dispatcher: CollectingDispatcher,
         tracker: Tracker,
         domain: DomainDict,
     ) -> Dict[Text, Any]:
-        """Validate `tea_size` value."""
+        """Validate 'food_size` value."""
 
         slot_value = slot_value.upper()
 
-        if slot_value not in ALLOWED_TEA_SIZES:
+        if slot_value not in ALLOWED_FOOD_SIZES:
             dispatcher.utter_message(text=f"Chúng mình chỉ có size M và size L thôi ạ.")
-            return {"tea_size": None}
+            return {"food_size": None}
         dispatcher.utter_message(text=f"Xác nhận bạn muốn size {slot_value}.")
-        return {"tea_size": slot_value}
+        return {"food_size": slot_value}
     
-    def validate_tea_quan(
+    def validate_food_quan(
         self,
         slot_value: Any,
         dispatcher: CollectingDispatcher,
         tracker: Tracker,
         domain: DomainDict,
     ) -> Dict[Text, Any]:
-        """Validate `tea_quan` value."""
+        """Validate `food_quan` value."""
          
         slot_value = toNum(slot_value)
 
         if int(slot_value) < 1 or int(slot_value) > 99:
-            dispatcher.utter_message(text=f"Rất xin lỗi quý khách chúng mình chỉ có thế phục vụ tối thiểu là 1 và tối đa là 99 ly thôi ạ")
-            return {"tea_quan": None}
+            dispatcher.utter_message(text=f"Rất xin lỗi quý khách chúng mình chỉ có thế phục vụ tối thiểu là 1 và tối đa là 99 cái thôi ạ")
+            return {"food_quan": None}
         dispatcher.utter_message(text=f"Xác nhận bạn muốn số lượng là {slot_value}.")
-        return {"tea_quan": slot_value}
+        return {"food_quan": slot_value}
 
 
 
@@ -193,57 +193,57 @@ class ValidateInforForm(FormValidationAction):
 
 # answer ask price question
 
-class action_return_tea_price(Action):
+class action_return_food_price(Action):
 
     def name(self) -> Text:
-        return "action_return_tea_price"
+        return "action_return_food_price"
     
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         
-        tea_type = 'loại trà quý khách vừa yêu cầu'
-        if tracker.get_slot("price_tea_type"):
-            tea_type = tracker.get_slot("price_tea_type").lower()
+        food_type = 'loại pizza quý khách vừa yêu cầu'
+        if tracker.get_slot("price_food_type"):
+            food_type = tracker.get_slot("price_food_type").lower()
         else:
-            if tracker.get_slot("inquired_tea_type"):
-                tea_type = tracker.get_slot("inquired_tea_type").lower()
+            if tracker.get_slot("inquired_food_type"):
+                food_type = tracker.get_slot("inquired_food_type").lower()
 
-        tea = Item()
-        tea.getItemByName(tea_type)
-        price = tea.getItemInfor()['price']
+        food = Item()
+        food.getItemByName(food_type)
+        price = food.getItemInfor()['price']
 
         if price:
-            dispatcher.utter_message(text=f"{tea_type} đang được bán với giá là {str(price)}")
+            dispatcher.utter_message(text=f"{food_type} đang được bán với giá là {str(price)}")
             return []
         else:
-            dispatcher.utter_message(text=f"Xin lỗi quý khách, quán mình chưa phục vụ {tea_type} ạ")
+            dispatcher.utter_message(text=f"Xin lỗi quý khách, quán mình chưa phục vụ {food_type} ạ")
             return []
         
 
-# answer if tea type in menu
+# answer if food type in menu
 
-class action_inquired_tea_type(Action):
+class action_inquired_food_type(Action):
 
     def name(self) -> Text:
-        return "action_inquired_tea_type"
+        return "action_inquired_food_type"
     
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         
-        tea_type = tracker.get_slot("inquired_tea_type").lower() if tracker.get_slot("inquired_tea_type") else 'loại trà quý khách vừa yêu cầu'
+        food_type = tracker.get_slot("inquired_food_type").lower() if tracker.get_slot("inquired_food_type") else 'loại pizza quý khách vừa yêu cầu'
 
         menu = Item().getAllItem()
-        ALLOWED_TEA_TYPES = []
+        ALLOWED_FOOD_TYPES = []
         for i in menu:
-            ALLOWED_TEA_TYPES.append(i[1])
+            ALLOWED_FOOD_TYPES.append(i[1])
 
-        if tea_type in ALLOWED_TEA_TYPES:
-            dispatcher.utter_message(text=f"dạ quán mình có {tea_type} ạ")
+        if food_type in ALLOWED_FOOD_TYPES:
+            dispatcher.utter_message(text=f"dạ quán mình có {food_type} ạ")
             return []
         else:
-            dispatcher.utter_message(text=f"Xin lỗi quý khách, quán mình chưa phục vụ {tea_type} ạ")
+            dispatcher.utter_message(text=f"Xin lỗi quý khách, quán mình chưa phục vụ {food_type} ạ")
             return []
 
  # answer invoice
@@ -264,11 +264,11 @@ Thông tin đơn hàng
     Sđt: {tracker.get_slot('phone')}
     Địa chỉ: {tracker.get_slot('address')}
 ***
-    Loại: {tracker.get_slot('tea_type')}
-    Size: {tracker.get_slot('tea_size').upper()}
-    Số lượng: {int(toNum(tracker.get_slot('tea_quan')))}
+    Loại: {tracker.get_slot('food_type')}
+    Size: {tracker.get_slot('food_size').upper()}
+    Số lượng: {int(toNum(tracker.get_slot('food_quan')))}
 ***
-    Thành tiền: {total(tracker.get_slot('tea_type'), tracker.get_slot('tea_quan'))}
+    Thành tiền: {total(tracker.get_slot('food_type'), tracker.get_slot('food_quan'))}
 '''
         dispatcher.utter_message(text= invoice)
 
@@ -289,13 +289,13 @@ class ActionSubmitInvoice(Action):
             user = User(name = tracker.get_slot('user_name'), phone=tracker.get_slot('phone'))
             user.addUser()
         user = user.getUserInfor()
-        tea = Item()
-        tea.getItemByName(tracker.get_slot('tea_type'))
-        tea = tea.getItemInfor()
-        sum = tea['price'] * int(toNum(tracker.get_slot('tea_quan')))
-        tea_quan = int(toNum(tracker.get_slot('tea_quan')))
+        food = Item()
+        food.getItemByName(tracker.get_slot('food_type'))
+        food = food.getItemInfor()
+        sum = food['price'] * int(toNum(tracker.get_slot('food_quan')))
+        food_quan = int(toNum(tracker.get_slot('food_quan')))
         now = datetime.datetime.now()
-        receipt = Receipt(id_user=user['id'], id_item=tea['id'], address=tracker.get_slot('address'), create_at=now, quantity=tea_quan, sum= sum)
+        receipt = Receipt(id_user=user['id'], id_item=food['id'], address=tracker.get_slot('address'), create_at=now, quantity=food_quan, sum= sum)
         receipt.addReceipt()
         dispacher.utter_message(text='Ghi nhận đơn hàng thành công')
         return [AllSlotsReset()]
@@ -311,12 +311,12 @@ class ActionCancelInvoice(Action):
         dispacher.utter_message(text='Xác nhận hủy đơn')
         return [AllSlotsReset()]
         
-def total(tea_type, tea_quan) -> str:
-    tea = Item()
-    tea.getItemByName(tea_type)
-    tea_price = tea.getItemInfor()['price']
-    tea_quan = int(toNum(tea_quan))
-    total = tea_quan * tea_price
+def total(food_type, food_quan) -> str:
+    food = Item()
+    food.getItemByName(food_type)
+    food_price = food.getItemInfor()['price']
+    food_quan = int(toNum(food_quan))
+    total = food_quan * food_price
     str_total = str(total)
     pos = 3
     while(pos < len(str_total)) :

@@ -4,9 +4,9 @@ from mysql.connector import Error
 class DBconnector :
     def __init__(self) -> None:
         self.connection = mysql.connector.connect(host='localhost',
-                                                  database='cafestore',
-                                                  user='chatbot',
-                                                  password='thaisdang')
+                                                  database='chatbox',
+                                                  user='root',
+                                                  password='')
         if self.connection.is_connected() :
             self.cursor = self.connection.cursor()
         else:

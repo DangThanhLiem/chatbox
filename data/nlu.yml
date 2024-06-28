@@ -111,15 +111,15 @@ nlu:
       - cho mình xin menu với ạ
       - menu
       - bạn có thể gừi menu cho mình được không
-      - thức uống của quán là gì vậy ạ
+      - Đồ ăn của quán là gì vậy ạ
       - quán này bán gì
       - menu gồm những món gì vậy
-      - quán mình bán những loại trà nào vậy ạ
+      - quán mình bán những loại pizza nào vậy ạ
       - quán mình có những món gì vậy
-      - quán mình có bao nhiêu loại trà vậy ạ
+      - quán mình có bao nhiêu loại pizza vậy ạ
       - cho xin cái menu được không
       - ở đây bán những món gì vậy
-      - ở đây bán trà gì
+      - ở đây bán đồ ăn gì
       - ở đây bán gì
 
   - intent: ask_function
@@ -136,30 +136,30 @@ nlu:
 
   - intent: ask_price
     examples: |
-      - giá của [trà đào](tea_type)
-      - cho mình hỏi giá của [trà sen](tea_type)
-      - giá của [trà hoa cúc](tea_type)
-      - [trà ô long](tea_type) bao nhiêu vậy ạ
-      - [trà lipton](tea_type) bao nhiêu một ly
-      - cho mình hỏi [trà đào cam sả](tea_type) bán sao vậy ạ
-      - shop ơi [trà thảo mộc](tea_type) bao nhiêu một ly vậy ạ
-      - [trà đá](tea_type) bao nhiêu
-      - [trà hoa hồng](tea_type) bán nhiêu
-      - [trà lipton](tea_type) nhiêu tiền
-      - [trà đào](tea_type) nhiu tiền
+      - giá của [Pizza Hải Sản](food_type)
+      - cho mình hỏi giá của [Pizza Xúc Xích](food_type)
+      - giá của [Pizza Bò](food_type)
+      - [Pizza Thập Cẩm](food_type) bao nhiêu vậy ạ
+      - [Khoai Tây Chiên](food_type) bao nhiêu một ly
+      - cho mình hỏi [Pizza Hải Sản](food_type) bán sao vậy ạ
+      - shop ơi [Pizza Xúc Xích](food_type) bao nhiêu một ly vậy ạ
+      - [Pizza Bò](food_type) bao nhiêu
+      - [Pizza Thập Cẩm](food_type) bán nhiêu
+      - [Khoai Tây Chiên](food_type) nhiêu tiền
+      - [Pizza Hải Sản](food_type) nhiu tiền
 
-  - intent: inquire_tea_type
+  - intent: inquire_food_type
     examples: |
-      - quán mình có bán [trà dào](tea_type) không ạ
-      - ở đây có bán [trà sen](tea_type) không ạ
-      - tiệm mình có kinh doanh [trà vải](tea_type) không
-      - cho mình hỏi ở đây có bán [trà hoa hồng](tea_type) không
-      - có bán [trà hoa cúc](tea_type) không
-      - bạn có [trà thảo mộc](tea_type) không
-      - có [trà cam](tea_type) không
-      - quán mình có [trà lipton](tea_type) hong ạ
-      - quán mình có bán [trà tắc](tea_type) hong
-      - quán mình có bán [trà sữa](tea_type) không
+      - quán mình có bán [Pizza Hải Sản](food_type) không ạ
+      - ở đây có bán [Pizza Bò](food_type) không ạ
+      - tiệm mình có kinh doanh [Pizza Thập Cẩm](food_type) không
+      - cho mình hỏi ở đây có bán [Khoai Tây Chiên](food_type) không
+      - có bán [Pizza Bò](food_type) không
+      - bạn có [Pizza Hải Sản](food_type) không
+      - có [Pizza Xúc Xích](food_type) không
+      - quán mình có [Pizza Thập Cẩm](food_type) hong ạ
+      - quán mình có bán [Pizza Bò](food_type) hong
+      - quán mình có bán [Pizza Thập Cẩm](food_type) không
 
   - intent: ask_name
     examples: |
@@ -170,526 +170,143 @@ nlu:
       - bạn là ai
       - tên gì
 
-  - intent: buy_tea
+  - intent: buy_food
     examples: |
-      - mua trà
-      - tôi muốn mua trà
-      - tôi muốn đặt trà
-      - tôi muốn order trà
-      - tôi muốn đặt thức uống
-      - tôi muốn đặt đồ uống
-      - tôi muốn order thức uống
-      - cho tôi trà
-      - mình muốn mua trà
-      - mình muốn đặt trà
-      - mình muốn order trà
-      - mình muốn đặt thức uống
-      - mình muốn đặt đồ uống
-      - mình muốn order thức uống
-      - cho mình ly trà
-      - anh muốn mua trà
-      - anh muốn đặt trà
-      - anh muốn order trà
-      - anh muốn đặt thức uống
-      - anh muốn đặt đồ uống
-      - anh muốn order thức uống
-      - cho anh ly trà
-      - chị muốn mua trà
-      - chị muốn đặt trà
-      - chị muốn order trà
-      - chị muốn đặt thức uống
-      - chị muốn đặt đồ uống
-      - chị muốn order thức uống
-      - cho chị ly trà
+      - mua pizza
+      - tôi muốn mua pizza
+      - tôi muốn đặt pizza
+      - tôi muốn order pizza
+      - tôi muốn đặt đồ ăn
+      - tôi muốn đặt pizza
+      - tôi muốn order pizza
+      - cho tôi pizza
+      - mình muốn mua pizza
+      - mình muốn đặt pizza
+      - mình muốn order pizza
+      - mình muốn đặt thức ăn
+      - mình muốn đặt đồ ăn
+      - mình muốn order thức ăn
+      - cho mình ly pizza
+      - anh muốn mua pizza
+      - anh muốn đặt pizza
+      - anh muốn order pizza
+      - anh muốn đặt thức ăn
+      - anh muốn đặt đồ ăn
+      - anh muốn order thức ăn
+      - cho anh ly pizza
+      - chị muốn mua pizza
+      - chị muốn đặt pizza
+      - chị muốn order pizza
+      - chị muốn đặt thức ăn
+      - chị muốn đặt đồ ăn
+      - chị muốn order thức ăn
+      - cho chị ly pizza
       - mình muốn đặt hàng
-      - cho tao trà
-      - cho tao mua trà
-      - cho mình [mười](tea_quan) [trà đào](tea_type) size [M](tea_size)
-      - tôi muốn đặt [một](tea_quan) [trà ô long](tea_type) size [L](tea_size)
-      - tôi muốn đặt [hai](tea_quan) [trà đào](tea_type) size [M](tea_size)
-      - tôi muốn đặt [1](tea_quan) [trà ô long](tea_type) size [L](tea_size)
-      - tôi muốn đặt [2](tea_quan) [trà đào](tea_type) size [M](tea_size)
-      - cho tôi [một](tea_quan) [trà vải](tea_type)
-      - tôi muốn order [mười lăm](tea_quan) [trà ô long](tea_type) size [L](tea_size)
-      - tôi muốn order [mười hai](tea_quan) [trà đào](tea_type) size [M](tea_size)
-      - tôi muốn order [3](tea_quan) [trà ô long](tea_type) size [L](tea_size)
-      - tôi muốn order [4](tea_quan) [trà đào](tea_type) size [M](tea_size)
-      - đặt [trà lipton](tea_type) size [M](tea_size) với số lượng [5](tea_quan)
-      - đặt [trà sen](tea_type) size [L](tea_size) với số lượng [bảy](tea_quan)
-      - order [mười một](tea_quan) [trà thảo mộc](tea_type) size [L](tea_size)
-      - mình muốn đặt [ba](tea_quan) [trà ô long](tea_type) size [L](tea_size)
-      - mình muốn đặt [bốn](tea_quan) [trà đào](tea_type) size [M](tea_size)
-      - mình muốn đặt [6](tea_quan) [trà ô long](tea_type) size [L](tea_size)
-      - mình muốn đặt [7](tea_quan) [trà đào](tea_type) size [M](tea_size)
-      - cho mình [một](tea_quan) [trà vải](tea_type)
-      - mình muốn order [năm](tea_quan) [trà ô long](tea_type) size [L](tea_size)
-      - mình muốn order [sáu](tea_quan) [trà hoa cúc](tea_type) size [M](tea_size)
-      - mình muốn order [8](tea_quan) [trà ô long](tea_type) size [L](tea_size)
-      - mình muốn order [9](tea_quan) [trà hoa hồng](tea_type) size [M](tea_size)
-      - đặt [trà tắc](tea_type) size [M](tea_size) với số lượng [5](tea_quan)
-      - đặt [trà đào cam sả](tea_type) size [L](tea_size) với số lượng [bảy](tea_quan)
-      - order cho anh [tám](tea_quan) [trà hoa cúc](tea_type) size [L](tea_size)
-      - order cho chị [chín](tea_quan) [trà thảo mộc](tea_type) size [L](tea_size)
-      - bạn order giúp chị [mười](tea_quan) [trà hoa hồng](tea_type) nhé
-      - bạn order [mười một](tea_quan) [trà hoa cúc](tea_type) giúp chị nhé
-      - em order giúp anh [năm](tea_quan) [trà hoa hồng](tea_type) nhé
-      - em order [mười hai](tea_quan) [trà đào cam sả](tea_type) giúp anh nhé
-      - cho anh [mười ba](tea_quan) [trà tắc](tea_type) nha
-      - anh muốn đặt [trà đào cam sả](tea_type)
-      - mình muốn order [trà cam](tea_type)
-      - cho tui [trà ô long](tea_type) nha
-      - lấy cho mình [một](tea_quan) [trà lipton](tea_type) nha
-      - cho anh [hai](tea_quan) [trà sữa](tea_type) nha
+      - cho tao pizza
+      - cho tao mua pizza
+      - cho mình [mười](food_quan) [Khoai Tây Chiên](food_type) size [M](food_size)
+      - tôi muốn đặt [một](food_quan) [Pizza Thập Cẩm ](food_type) size [L](food_size)
+      - tôi muốn đặt [hai](food_quan) [Pizza Bò](food_type) size [M](food_size)
+      - tôi muốn đặt [1](food_quan) [Pizza Xúc Xích](food_type) size [L](food_size)
+      - tôi muốn đặt [2](food_quan) [Pizza Hải Sản](food_type) size [M](food_size)
+      - cho tôi [một](food_quan) [Pizza Thập Cẩm](food_type)
+      - tôi muốn order [mười lăm](food_quan) [Pizza Bò](food_type) size [L](food_size)
+      - tôi muốn order [mười hai](food_quan) [Pizza Thập Cẩm ](food_type) size [M](food_size)
+      - tôi muốn order [3](food_quan) [Pizza Xúc Xích](food_type) size [L](food_size)
+      - tôi muốn order [4](food_quan) [Pizza Bò](food_type) size [M](food_size)
+      - đặt [Pizza Bò](food_type) size [M](food_size) với số lượng [5](food_quan)
+      - đặt [Pizza Thập Cẩm ](food_type) size [L](food_size) với số lượng [bảy](food_quan)
+      - order [mười một](food_quan) [Pizza Bò](food_type) size [L](food_size)
+      
+      - bạn order giúp chị [mười](food_quan) [Khoai Tây Chiên](food_type) nhé
+      - bạn order [mười một](food_quan) [Pizza Thập Cẩm ](food_type) giúp chị nhé
+      - em order giúp anh [năm](food_quan) [Pizza Bò](food_type) nhé
+      - em order [mười hai](food_quan) [Pizza Xúc Xích](food_type) giúp anh nhé
+      - cho anh [mười ba](food_quan) [Pizza Thập Cẩm ](food_type) nha
+      - anh muốn đặt [Pizza Hải Sản](food_type)
+      - mình muốn order [Pizza Bò](food_type)
+      - cho tui [Pizza Thập Cẩm ](food_type) nha
+      - lấy cho mình [một](food_quan) [Pizza Thập Cẩm ](food_type) nha
+      - cho anh [hai](food_quan) [Pizza Bò](food_type) nha
   - intent: inform
     examples: |
-      - [trà đào cam sả](tea_type)
-      - [trà ô long](tea_type)
-      - [trà vải](tea_type)
-      - [trà thảo mộc](tea_type)
-      - [trà hoa hồng](tea_type)
-      - [trà hoa cúc](tea_type)
-      - [trà cam](tea_type)
-      - [trà lipton](tea_type)
-      - [trà sen](tea_type)
-      - [trà đào](tea_type)
-      - [trà tắc](tea_type)
-      - [trà đen](tea_type)
-      - [trà xanh](tea_type)
-      - [trà oolong](tea_type)
-      - [trà trắng](tea_type)
-      - [trà đỏ](tea_type)
-      - [trà hồng trà](tea_type)
-      - [trà Jasmin](tea_type)
-      - [trà hoa cúc](tea_type)
-      - [trà lá sen](tea_type)
-      - [trà lá liễu](tea_type)
-      - [trà hạt sen](tea_type)
-      - [trà lá dứa](tea_type)
-      - [trà lá vải](tea_type)
-      - [trà gừng](tea_type)
-      - [trà cam](tea_type)
-      - [trà chanh](tea_type)
-      - [trà đào](tea_type)
-      - [trà táo](tea_type)
-      - [trà dứa](tea_type)
-      - [trà đào bào](tea_type)
-      - [trà việt quất](tea_type)
-      - [trà đu đủ](tea_type)
-      - [trà dứa tươi](tea_type)
-      - [trà bưởi](tea_type)
-      - [trà cà phê](tea_type)
-      - [trà sâm dứa](tea_type)
-      - [trà oải hương](tea_type)
-      - [trà đào mật ong](tea_type)
-      - [trà táo xanh](tea_type)
-      - [trà quế](tea_type)
-      - [trà bạc hà](tea_type)
-      - [trà cam thảo](tea_type)
-      - [trà đào cam thảo](tea_type)
-      - [trà bạch đàn](tea_type)
-      - [trà hoa hồi](tea_type)
-      - [trà nha đam](tea_type)
-      - [trà hương thảo](tea_type)
-      - [trà đen sữa](tea_type)
-      - [trà sữa trân châu](tea_type)
-      - [trà thạch rau câu](tea_type)
-      - [trà sữa dâu](tea_type)
-      - [trà sữa khoai môn](tea_type)
-      - [trà sữa trà xanh](tea_type)
-      - [trà sữa hoa quả](tea_type)
-      - [trà sữa hạt chia](tea_type)
-      - [trà sữa matcha](tea_type)
-      - [trà sữa trứng](tea_type)
-      - [trà sữa cà phê](tea_type)
-      - [trà sữa trà oolong](tea_type)
-      - [trà sữa trà đen](tea_type)
-      - [trà cúc bích](tea_type)
-      - vâng [trà đá](tea_type)
-      - dạ [trà sữa](tea_type) ạ
-      - vâng [trà chanh](tea_type) ạ
-      - dạ [hồng trà](tea_type)
-      - [trà tắc](tea_type) nhé
-      - [trà lài](tea_type) nha
-      - [trà dâu](tea_type) ạ
-      - [trà vải](tea_type) đi
-      - [trà đào](tea_type) nha
-      - [trà lipton](tea_type) ạ
-      - [trà lipton](tea_type) nhé
-      - [nước ép cà rốt](tea_type)
-      - [nước ép dưa hấu](tea_type)
-      - [cà phê sữa nóng](tea_type)
-      - [nước ép cà chua](tea_type)
-      - [sinh tố bơ](tea_type)
-      - [cà phê sữa tươi](tea_type)
-      - [nước ép cải bó xôi](tea_type)
-      - [sữa chua trái cây](tea_type)
-      - [trà xanh matcha](tea_type)
-      - [sinh tố việt quất](tea_type)
-      - [sữa đậu nành](tea_type)
-      - [nước ép dưa leo](tea_type)
-      - [cà phê sữa kem](tea_type)
-      - [trà sữa đào](tea_type)
-      - [nước chanh leo](tea_type)
-      - [nước ép táo](tea_type)
-      - [sinh tố xoài](tea_type)
-      - [cà phê moka](tea_type)
-      - [sữa chua xoài](tea_type)
-      - [trà oolong đào](tea_type)
-      - [nước mía](tea_type)
-      - [cà phê sữa đá xay](tea_type)
-      - [trà sữa thái](tea_type)
-      - [nước cam ép tươi](tea_type)
-      - [sinh tố nha đam](tea_type)
-      - [nước ép cà chua](tea_type)
-      - [cà phê pha máy](tea_type)
-      - [trà sen](tea_type)
-      - [nước tăng lực](tea_type)
-      - [sinh tố bơ đậu phộng](tea_type)
-      - [nước mắm me](tea_type)
-      - [cà phê đen đá](tea_type)
-      - [trà sữa matcha](tea_type)
-      - [sữa chua trân châu đường đen](tea_type)
-      - [nước dừa tươi](tea_type)
-      - [trà đen](tea_type)
-      - [sinh tố chuối](tea_type)
-      - [nước chanh muối](tea_type)
-      - [cà phê sữa đá](tea_type)
-      - [sữa chua nếp cẩm](tea_type)
-      - [nước cam mật ong](tea_type)
-      - [sinh tố dâu tây](tea_type)
-      - [cà phê nóng](tea_type)
-      - [sữa đậu nành trân châu](tea_type)
-      - [nước chanh tắc](tea_type)
-      - [trà hoa cúc](tea_type)
-      - [sinh tố bơ sữa chua](tea_type)
-      - [cà phê sữa bạc hà](tea_type)
-      - [sữa tươi](tea_type)
-      - [trà bí đao](tea_type)
-      - [nước sâm](tea_type)
-      - [sinh tố bơ đá](tea_type)
-      - [cà phê sữa dừa](tea_type)
-      - [trà sữa bạc hà](tea_type)
-      - [nước ép cải xoăn](tea_type)
-      - [cà phê rang xay](tea_type)
-      - [trà thạch đào](tea_type)
-      - [nước cam mật ong](tea_type)
-      - [sinh tố chuối dừa](tea_type)
-      - [nước mắm nhĩ](tea_type)
-      - [cà phê sữa phin](tea_type)
-      - [trà đào hồng](tea_type)
-      - [sữa chua trân châu đường đen](tea_type)
-      - [nước cốt dừa](tea_type)
-      - [trà sữa bưởi](tea_type)
-      - [sinh tố dâu tây sữa chua](tea_type)
-      - [nước chanh muối chanh dây](tea_type)
-      - [cà phê đen nóng](tea_type)
-      - [trà xanh lục trà](tea_type)
-      - [sữa đậu nành đen](tea_type)
-      - [nước cam ép cà rốt](tea_type)
-      - [sinh tố bơ kiwi](tea_type)
-      - [cà phê sữa dừa đá](tea_type)
-      - [sữa chua trân châu đường đen](tea_type)
-      - [nước ép nho](tea_type)
-      - [trà xanh sen](tea_type)
-      - [sinh tố đu đủ](tea_type)
-      - [cà phê sữa caramel](tea_type)
-      - [sữa đậu nành trân châu đường đen](tea_type)
-      - [trà hoa cúc đá xay](tea_type)
-      - [nước chanh muối vỏ cam](tea_type)
-      - [sinh tố việt quất sữa chua](tea_type)
-      - [cà phê sữa nâu](tea_type)
-      - [trà sữa việt quất](tea_type)
-      - [sữa đậu nành trân châu đường đen](tea_type)
-      - [trà chanh dây](tea_type)
-      - [nước ép lựu](tea_type)
-      - [trà sữa matcha](tea_type)
-      - [sinh tố xoài](tea_type)
-      - [cà phê sữa kem](tea_type)
-      - [nước ép táo](tea_type)
-      - [sữa tươi đá xay](tea_type)
-      - [nước ép dưa hấu](tea_type)
-      - [trà xanh vải](tea_type)
-      - [sinh tố việt quất](tea_type)
-      - [cà phê sữa đá xay](tea_type)
-      - [nước ép cà chua](tea_type)
-      - [trà bí đao](tea_type)
-      - [sữa chua trái cây](tea_type)
-      - [nước tắc](tea_type)
-      - [sinh tố dưa hấu](tea_type)
-      - [cà phê đen đá](tea_type)
-      - [trà gừng đá](tea_type)
-      - [sữa chua mít](tea_type)
-      - [nước cam ép táo](tea_type)
-      - [sinh tố táo](tea_type)
-      - [cà phê sữa bạc hà](tea_type)
-      - [trà đen macchiato](tea_type)
-      - [sữa chua matcha](tea_type)
-      - [nước ép cà rốt](tea_type)
-      - [trà sữa trân châu đường đen](tea_type)
-      - [sinh tố việt quất sữa tươi](tea_type)
-      - [nước chanh leo](tea_type)
-      - [cafe](tea_type)
-      - trà gì cũng được
-      - size [M](tea_size)
-      - size [L](tea_size)
-      - size [M](tea_size) ạ
-      - size [L](tea_size) nhé
-      - dạ size [M](tea_size) ạ
-      - size [L](tea_size) nha
-      - [L](tea_size)
-      - [M](tea_size)
-      - [L](tea_size) nha
-      - [M](tea_size) nhé
-      - [L](tea_size) ạ
-      - dạ [M](tea_size)
-      - size [L](tea_size) em nhé
-      - size [M](tea_size) bạn nhé
-      - cho mình [M](tea_size) bạn nhé
-      - mình muốn size [L](tea_size)
-      - size [vừa](tea_size)
-      - size [bé](tea_size)
-      - [tí](tea_size)
-      - [bự](tea_size)
-      - cho anh size [m](tea_size)
-      - cho anh size [l](tea_size)
-      - cho tao size [M](tea_size)
-      - cho em size [L](tea_size)
-      - size [nhỏ](tea_size)
-      - size [lớn](tea_size)
-      - size [nào cũng được](tea_size)
-      - size [lớn nhất](tea_size)
-      - size [nhỏ nhất](tea_size)
-      - size [bự nhất](tea_size)
+      - [Pizza Thập Cẩm ](food_type)
+      - [Pizza Bò](food_type)
+      - [Pizza Xúc Xích](food_type)
+      - [Pizza Hải Sản](food_type)
+      - [Pizza Thập Cẩm](food_type)
+      
+      - pizza gì cũng được
+      - size [M](food_size)
+      - size [L](food_size)
+      - size [M](food_size) ạ
+      - size [L](food_size) nhé
+      - dạ size [M](food_size) ạ
+      - size [L](food_size) nha
+      - [L](food_size)
+      - [M](food_size)
+      - [L](food_size) nha
+      - [M](food_size) nhé
+      - [L](food_size) ạ
+      - dạ [M](food_size)
+      - size [L](food_size) em nhé
+      - size [M](food_size) bạn nhé
+      - cho mình [M](food_size) bạn nhé
+      - mình muốn size [L](food_size)
+      - size [vừa](food_size)
+      - size [bé](food_size)
+      - [tí](food_size)
+      - [bự](food_size)
+      - cho anh size [m](food_size)
+      - cho anh size [l](food_size)
+      - cho tao size [M](food_size)
+      - cho em size [L](food_size)
+      - size [nhỏ](food_size)
+      - size [lớn](food_size)
+      - size [nào cũng được](food_size)
+      - size [lớn nhất](food_size)
+      - size [nhỏ nhất](food_size)
+      - size [bự nhất](food_size)
       - dạ size [m] ạ
-      - cho anh size [M](tea_size) em nhé
-      - size [m](tea_size) hoi
-      - size [l](tea_size) luôn
-      - [1](tea_quan) ly
-      - [2](tea_quan) ạ
-      - [3](tea_quan) nha
-      - [4](tea_quan) nhé
-      - [5](tea_quan)
-      - [6](tea_quan) ly
-      - [7](tea_quan) ly
-      - dạ [8](tea_quan) ly ạ
-      - [9](tea_quan) ly
-      - [10](tea_quan)
-      - [11](tea_quan) nhe
-      - cho mình [12](tea_quan) nha
-      - [13](tea_quan)
-      - lấy chị [14](tea_quan) ly nha
-      - [15](tea_quan)
-      - lấy tui [16](tea_quan) nhé
-      - [17](tea_quan)
-      - [18](tea_quan) nhá
-      - [19](tea_quan)
-      - dạ cho mình [20](tea_quan) ly ạ
-      - [21](tea_quan)
-      - dạ cho anh [22](tea_quan) ly nhé
-      - [23](tea_quan)
-      - cho tui [24](tea_quan) ly nhá
-      - vâng [25](tea_quan)
-      - vâng [26](tea_quan) ạ
-      - [27](tea_quan)
-      - [28](tea_quan)
-      - [29](tea_quan)
-      - [30](tea_quan)
-      - [31](tea_quan)
-      - [32](tea_quan)
-      - [33](tea_quan)
-      - [34](tea_quan)
-      - [35](tea_quan)
-      - [36](tea_quan)
-      - [37](tea_quan)
-      - [38](tea_quan)
-      - [39](tea_quan)
-      - [40](tea_quan)
-      - [41](tea_quan)
-      - [42](tea_quan)
-      - [43](tea_quan)
-      - [44](tea_quan)
-      - [45](tea_quan)
-      - [46](tea_quan)
-      - [47](tea_quan)
-      - [48](tea_quan)
-      - [49](tea_quan)
-      - [50](tea_quan)
-      - [51](tea_quan)
-      - [52](tea_quan)
-      - [53](tea_quan)
-      - [54](tea_quan)
-      - [55](tea_quan)
-      - [56](tea_quan)
-      - [57](tea_quan)
-      - [58](tea_quan)
-      - [59](tea_quan)
-      - [60](tea_quan)
-      - [61](tea_quan)
-      - [62](tea_quan)
-      - [63](tea_quan)
-      - [64](tea_quan)
-      - [65](tea_quan)
-      - [66](tea_quan)
-      - [67](tea_quan)
-      - [68](tea_quan)
-      - [69](tea_quan)
-      - [70](tea_quan)
-      - [71](tea_quan)
-      - [72](tea_quan)
-      - [73](tea_quan)
-      - [74](tea_quan)
-      - [75](tea_quan)
-      - [76](tea_quan)
-      - [77](tea_quan)
-      - [78](tea_quan)
-      - [79](tea_quan)
-      - [80](tea_quan)
-      - [81](tea_quan)
-      - [82](tea_quan)
-      - [83](tea_quan)
-      - [84](tea_quan)
-      - [85](tea_quan)
-      - [86](tea_quan)
-      - [87](tea_quan)
-      - [88](tea_quan)
-      - [89](tea_quan)
-      - [90](tea_quan)
-      - [91](tea_quan)
-      - [92](tea_quan)
-      - [93](tea_quan)
-      - [94](tea_quan)
-      - [95](tea_quan)
-      - [96](tea_quan)
-      - [97](tea_quan)
-      - [98](tea_quan)
-      - [99](tea_quan)
-      - [100](tea_quan)
-      - [101](tea_quan)
-      - [102](tea_quan)
-      - [103](tea_quan)
-      - [104](tea_quan)
-      - [105](tea_quan)
-      - [106](tea_quan)
-      - [107](tea_quan)
-      - [108](tea_quan)
-      - [109](tea_quan)
-      - [110](tea_quan)
-      - [111](tea_quan)
-      - [112](tea_quan)
-      - [113](tea_quan)
-      - [114](tea_quan)
-      - [115](tea_quan)
-      - [116](tea_quan)
-      - [117](tea_quan)
-      - [118](tea_quan)
-      - [119](tea_quan)
-      - [120](tea_quan)
-      - [121](tea_quan)
-      - [122](tea_quan)
-      - [123](tea_quan)
-      - [124](tea_quan)
-      - [125](tea_quan)
-      - [126](tea_quan)
-      - [127](tea_quan)
-      - [128](tea_quan)
-      - [129](tea_quan)
-      - [130](tea_quan)
-      - [131](tea_quan)
-      - [132](tea_quan)
-      - [133](tea_quan)
-      - [134](tea_quan)
-      - [135](tea_quan)
-      - [136](tea_quan)
-      - [137](tea_quan)
-      - [138](tea_quan)
-      - [139](tea_quan)
-      - [140](tea_quan)
-      - [141](tea_quan)
-      - [142](tea_quan)
-      - [143](tea_quan)
-      - [144](tea_quan)
-      - [145](tea_quan)
-      - [146](tea_quan)
-      - [147](tea_quan)
-      - [148](tea_quan)
-      - [149](tea_quan)
-      - [150](tea_quan)
-      - [151](tea_quan)
-      - [152](tea_quan)
-      - [153](tea_quan)
-      - [154](tea_quan)
-      - [155](tea_quan)
-      - [156](tea_quan)
-      - [157](tea_quan)
-      - [158](tea_quan)
-      - [159](tea_quan)
-      - [160](tea_quan)
-      - [161](tea_quan)
-      - [162](tea_quan)
-      - [163](tea_quan)
-      - [164](tea_quan)
-      - [165](tea_quan)
-      - [166](tea_quan)
-      - [167](tea_quan)
-      - [168](tea_quan)
-      - [169](tea_quan)
-      - [170](tea_quan)
-      - [171](tea_quan)
-      - [172](tea_quan)
-      - [173](tea_quan)
-      - [174](tea_quan)
-      - [175](tea_quan)
-      - [176](tea_quan)
-      - [177](tea_quan)
-      - [178](tea_quan)
-      - [179](tea_quan)
-      - [180](tea_quan)
-      - [181](tea_quan)
-      - [182](tea_quan)
-      - [183](tea_quan)
-      - [184](tea_quan)
-      - [185](tea_quan)
-      - [186](tea_quan)
-      - [187](tea_quan)
-      - [188](tea_quan)
-      - [189](tea_quan)
-      - [190](tea_quan)
-      - [191](tea_quan)
-      - [192](tea_quan)
-      - [193](tea_quan)
-      - [194](tea_quan)
-      - [195](tea_quan)
-      - [196](tea_quan)
-      - [197](tea_quan)
-      - [198](tea_quan)
-      - [199](tea_quan)
-      - [200](tea_quan)
-      - [một](tea_quan)
-      - [hai](tea_quan)
-      - [ba](tea_quan) ly
-      - [bốn](tea_quan) ly
-      - [năm](tea_quan) ly
-      - [sáu](tea_quan) ly
-      - [bảy](tea_quan) ly
-      - [tám](tea_quan) ly
-      - [chín](tea_quan) ly
-      - [mười](tea_quan)
-      - [mười một](tea_quan)
-      - [mười hai](tea_quan) ly
-      - [mười ba](tea_quan)
-      - [mười bốn](tea_quan) ly
-      - [mười lăm](tea_quan)
-      - [mười sáu](tea_quan)
-      - [mười bảy](tea_quan) ly
-      - [mười tám](tea_quan) ly
-      - [mười chín](tea_quan)
-      - [hai mươi](tea_quan) ly
-      - cho anh [ba](tea_quan)
-      - cho mình [một trăm](tea_quan) ly
-      - chị muốn [3 trăm](tea_quan) ly
-      - dạ [38](tea_quan) ạ
-      - mình tên là [Trần Thái Đăng](user_name)
-      - [Trần Thái Đăng](user_name)
+      - cho anh size [M](food_size) em nhé
+      - size [m](food_size) hoi
+      - size [l](food_size) luôn
+      - [1](food_quan) ly
+      - [2](food_quan) ạ
+      - [3](food_quan) nha
+      - [4](food_quan) nhé
+      - [5](food_quan)
+      - [6](food_quan) ly
+      - [7](food_quan) ly
+      - dạ [8](food_quan) ly ạ
+      - [9](food_quan) ly
+      - [10](food_quan)
+      - [11](food_quan) nhe
+      - cho mình [12](food_quan) nha
+      - [13](food_quan)
+      - lấy chị [14](food_quan) ly nha
+      - [15](food_quan)
+      - lấy tui [16](food_quan) nhé
+      - [17](food_quan)
+      - [18](food_quan) nhá
+      - [19](food_quan)
+      - dạ cho mình [20](food_quan) ly ạ
+      - [21](food_quan)
+      - dạ cho anh [22](food_quan) ly nhé
+      - [23](food_quan)
+      - cho tui [24](food_quan) ly nhá
+      - vâng [25](food_quan)
+      - vâng [26](food_quan) ạ
+      - [27](food_quan)
+      - [28](food_quan)
+      - [29](food_quan)
+      - [30](food_quan)
+      - [31](food_quan)
+      - [32](food_quan)
+      - [33](food_quan)
+      
+      - mình tên là [Đặng Thanh Liêm](user_name)
+      - [Đặng Thanh Liêm](user_name)
       - tên của mình là [Nguyễn Thị Thúy Liễu](user_name)
       - tên [Phạm Nguyễn Gia Bảo](user_name)
       - tên [Đăng](user_name)

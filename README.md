@@ -17,12 +17,12 @@ Open your terminal
 Clone this repo
 
 ```bash
-git clone https://github.com/fridaytd/order_tea_chatbot.git
+git clone https://github.com/DangThanhLiem/chatbox.git
 ```
 Navigate to the project directory
 
 ```bash
-cd order_tea_chatbot
+cd chatbox
 ```
 
 Create new virtual environment
@@ -31,8 +31,9 @@ Create new virtual environment
 python -m venv .env
 ```
 Activate the virtual environment (using properly file for your OS, my case in windows and i'm using PowerShell)
-
 ```bash
+.env\Scripts\Activate.ps1
+
 .env\Scripts\Activate.ps1
 ```
 Install dependences

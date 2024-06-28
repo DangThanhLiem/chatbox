@@ -32,13 +32,13 @@ stories:
       - intent: goodbye
       - action: utter_goodbye
 
-  - story: buy tea 2
+  - story: buy food 2
     steps:
-      - intent: buy_tea
-      - action: tea_form
-      - active_loop: tea_form
+      - intent: buy_food
+      - action: food_form
+      - active_loop: food_form
       - active_loop: null
-      - action: utter_tea_confirm
+      - action: utter_food_confirm
       - checkpoint: inform_infor2
 
   - story: inform infor
@@ -58,7 +58,7 @@ stories:
       - slot_was_set:
           - user_name: null
       - slot_was_set:
-          - user_name: Đăng
+          - user_name: Liêm
       - slot_was_set:
           - requested_slot: address
       - slot_was_set:

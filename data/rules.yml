@@ -10,21 +10,21 @@ rules:
   #   steps:
   #   - intent: bot_challenge
   #   - action: utter_iamabot
-  - rule: Activate Tea Form
+  - rule: Activate Food Form
     steps:
-      - intent: buy_tea
-      - action: tea_form
-      - active_loop: tea_form
+      - intent: buy_food
+      - action: food_form
+      - active_loop: food_form
 
-  - rule: Submit Tea Form
+  - rule: Submit Food Form
     condition:
-      - active_loop: tea_form
+      - active_loop: food_form
     steps:
-      - action: tea_form
+      - action: food_form
       - active_loop: null
       - slot_was_set:
           - requested_slot: null
-      - action: utter_tea_confirm
+      - action: utter_food_confirm
       - action: utter_get_infor
       - action: infor_form
       - active_loop: infor_form
@@ -55,9 +55,9 @@ rules:
       - action: utter_sorry
       - action: utter_goodbye
 
-  - rule: wanna stop tea form
+  - rule: wanna stop food form
     condition:
-      - active_loop: tea_form
+      - active_loop: food_form
     steps:
       - intent: stop
       - action: utter_ask_continue
@@ -69,7 +69,7 @@ rules:
       - intent: stop
       - action: utter_ask_continue
 
-  - rule: stop form tea form
+  - rule: stop form food form
     steps:
       - action: utter_ask_continue
       - intent: affirm
@@ -77,7 +77,7 @@ rules:
       - action: action_cancel_invoice
       - action: utter_goodbye
 
-  - rule: stop form tea form 2
+  - rule: stop form food form 2
     steps:
       - action: utter_ask_continue
       - intent: stop
@@ -85,7 +85,7 @@ rules:
       - action: action_cancel_invoice
       - action: utter_goodbye
 
-  - rule: dont stop form tea form
+  - rule: dont stop form food form
     steps:
       - action: utter_ask_continue
       - intent: deny
@@ -118,10 +118,10 @@ rules:
       - intent: ask_price
       - action: action_return_tea_price
 
-  - rule: inquire_tea_type
+  - rule: inquire_food_type
     steps:
-      - intent: inquire_tea_type
-      - action: action_inquired_tea_type
+      - intent: inquire_food_type
+      - action: action_inquired_food_type
 
   - rule: greeting
     steps:
