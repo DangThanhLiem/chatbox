@@ -140,9 +140,9 @@ nlu:
       - cho mình hỏi giá của [Pizza Xúc Xích](food_type)
       - giá của [Pizza Bò](food_type)
       - [Pizza Thập Cẩm](food_type) bao nhiêu vậy ạ
-      - [Khoai Tây Chiên](food_type) bao nhiêu một ly
+      - [Khoai Tây Chiên](food_type) bao nhiêu một phần
       - cho mình hỏi [Pizza Hải Sản](food_type) bán sao vậy ạ
-      - shop ơi [Pizza Xúc Xích](food_type) bao nhiêu một ly vậy ạ
+      - shop ơi [Pizza Xúc Xích](food_type) bao nhiêu một phần vậy ạ
       - [Pizza Bò](food_type) bao nhiêu
       - [Pizza Thập Cẩm](food_type) bán nhiêu
       - [Khoai Tây Chiên](food_type) nhiêu tiền
@@ -193,7 +193,7 @@ nlu:
       - anh muốn đặt thức ăn
       - anh muốn đặt đồ ăn
       - anh muốn order thức ăn
-      - cho anh ly pizza
+      - cho anh phần pizza
       - chị muốn mua pizza
       - chị muốn đặt pizza
       - chị muốn order pizza

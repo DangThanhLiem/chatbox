@@ -32,7 +32,6 @@ python -m venv .env
 ```
 Activate the virtual environment (using properly file for your OS, my case in windows and i'm using PowerShell)
 ```bash
-.env\Scripts\Activate.ps1
 
 .env\Scripts\Activate.ps1
 ```

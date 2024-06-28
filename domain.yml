@@ -178,8 +178,8 @@ responses:
     - text: "Ông chủ gọi mình là Xexe ạ"
 
   utter_ask_menu:
-    - text: "Mình gửi bạn menu nhaaa"
-    - text: "Menu tới liền đây"
+    - text: "Dạ menu đây ạ"
+    - text: "Menu của quán xin hân hạnh phục vụ "
 
   utter_goodbye:
     - text: "Xin chào và hẹn gặp lại ạ"
