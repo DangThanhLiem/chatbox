@@ -186,7 +186,7 @@ nlu:
       - mình muốn đặt thức ăn
       - mình muốn đặt đồ ăn
       - mình muốn order thức ăn
-      - cho mình ly pizza
+      - cho mình pizza
       - anh muốn mua pizza
       - anh muốn đặt pizza
       - anh muốn order pizza
@@ -200,7 +200,7 @@ nlu:
       - chị muốn đặt thức ăn
       - chị muốn đặt đồ ăn
       - chị muốn order thức ăn
-      - cho chị ly pizza
+      - cho chị pizza
       - mình muốn đặt hàng
       - cho tao pizza
       - cho tao mua pizza
@@ -230,12 +230,11 @@ nlu:
       - cho anh [hai](food_quan) [Pizza Bò](food_type) nha
   - intent: inform
     examples: |
-      - [Pizza Thập Cẩm ](food_type)
+      - [Pizza Thập Cẩm](food_type)
       - [Pizza Bò](food_type)
       - [Pizza Xúc Xích](food_type)
       - [Pizza Hải Sản](food_type)
       - [Pizza Thập Cẩm](food_type)
-      
       - pizza gì cũng được
       - size [M](food_size)
       - size [L](food_size)

@@ -116,7 +116,7 @@ rules:
   - rule: ask_price
     steps:
       - intent: ask_price
-      - action: action_return_tea_price
+      - action: action_return_food_price
 
   - rule: inquire_food_type
     steps:

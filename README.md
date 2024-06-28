@@ -1,7 +1,7 @@
 ﻿# order_food_chatbot
 
 ## Introduction
-This is an order tea chatbot made using the Rasa framework. It can be integrated into multiple platforms, such as websites, Facebook Messenger, etc., helping the owner of a Tea Shop to receive orders from customers in an engaging and new way. With this chatbot, customers can interact as if they were speaking to a staff member, inquiring about the Tea Shop, the menu, different tea options, and even place an order immediately by providing their name, phone number, address. However, due to limitations, this chatbot may work better in a smaller city rather than a larger region.
+This is an order food chatbot made using the Rasa framework. It can be integrated into multiple platforms, such as websites, Facebook Messenger, etc., helping the owner of a Food Shop to receive orders from customers in an engaging and new way. With this chatbot, customers can interact as if they were speaking to a staff member, inquiring about the Food Shop, the menu, different food options, and even place an order immediately by providing their name, phone number, address. However, due to limitations, this chatbot may work better in a smaller city rather than a larger region.
 
 ## Features
 ### 1. Answer some questions.
