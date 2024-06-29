@@ -136,30 +136,30 @@ nlu:
 
   - intent: ask_price
     examples: |
-      - giá của [Pizza Hải Sản](food_type)
-      - cho mình hỏi giá của [Pizza Xúc Xích](food_type)
-      - giá của [Pizza Bò](food_type)
-      - [Pizza Thập Cẩm](food_type) bao nhiêu vậy ạ
-      - [Khoai Tây Chiên](food_type) bao nhiêu một phần
-      - cho mình hỏi [Pizza Hải Sản](food_type) bán sao vậy ạ
-      - shop ơi [Pizza Xúc Xích](food_type) bao nhiêu một phần vậy ạ
-      - [Pizza Bò](food_type) bao nhiêu
-      - [Pizza Thập Cẩm](food_type) bán nhiêu
-      - [Khoai Tây Chiên](food_type) nhiêu tiền
-      - [Pizza Hải Sản](food_type) nhiu tiền
+      - giá của [pizza hải sản](food_type)
+      - cho mình hỏi giá của [pizza xúc xích](food_type)
+      - giá của [pizza bò](food_type)
+      - [pizza bò](food_type) bao nhiêu vậy ạ
+      - [khoai tây chiên](food_type) bao nhiêu một phần
+      - cho mình hỏi [pizza hải sản](food_type) bán sao vậy ạ
+      - shop ơi [pizza xúc xích](food_type) bao nhiêu một phần vậy ạ
+      - [pizza bò](food_type) bao nhiêu
+      - [pizza bò](food_type) bán nhiêu
+      - [khoai tây chiên](food_type) nhiêu tiền
+      - [pizza hải sản](food_type) nhiu tiền
 
   - intent: inquire_food_type
     examples: |
-      - quán mình có bán [Pizza Hải Sản](food_type) không ạ
-      - ở đây có bán [Pizza Bò](food_type) không ạ
-      - tiệm mình có kinh doanh [Pizza Thập Cẩm](food_type) không
-      - cho mình hỏi ở đây có bán [Khoai Tây Chiên](food_type) không
-      - có bán [Pizza Bò](food_type) không
-      - bạn có [Pizza Hải Sản](food_type) không
-      - có [Pizza Xúc Xích](food_type) không
-      - quán mình có [Pizza Thập Cẩm](food_type) hong ạ
-      - quán mình có bán [Pizza Bò](food_type) hong
-      - quán mình có bán [Pizza Thập Cẩm](food_type) không
+      - quán mình có bán [pizza hải sản](food_type) không ạ
+      - ở đây có bán [pizza bò](food_type) không ạ
+      - tiệm mình có kinh doanh [pizza bò](food_type) không
+      - cho mình hỏi ở đây có bán [khoai tây chiên](food_type) không
+      - có bán [pizza bò](food_type) không
+      - bạn có [pizza hải sản](food_type) không
+      - có [pizza xúc xích](food_type) không
+      - quán mình có [pizza bò](food_type) hong ạ
+      - quán mình có bán [pizza bò](food_type) hong
+      - quán mình có bán [pizza bò](food_type) không
 
   - intent: ask_name
     examples: |
@@ -204,37 +204,37 @@ nlu:
       - mình muốn đặt hàng
       - cho tao pizza
       - cho tao mua pizza
-      - cho mình [mười](food_quan) [Khoai Tây Chiên](food_type) size [M](food_size)
-      - tôi muốn đặt [một](food_quan) [Pizza Thập Cẩm ](food_type) size [L](food_size)
-      - tôi muốn đặt [hai](food_quan) [Pizza Bò](food_type) size [M](food_size)
-      - tôi muốn đặt [1](food_quan) [Pizza Xúc Xích](food_type) size [L](food_size)
-      - tôi muốn đặt [2](food_quan) [Pizza Hải Sản](food_type) size [M](food_size)
-      - cho tôi [một](food_quan) [Pizza Thập Cẩm](food_type)
-      - tôi muốn order [mười lăm](food_quan) [Pizza Bò](food_type) size [L](food_size)
-      - tôi muốn order [mười hai](food_quan) [Pizza Thập Cẩm ](food_type) size [M](food_size)
-      - tôi muốn order [3](food_quan) [Pizza Xúc Xích](food_type) size [L](food_size)
-      - tôi muốn order [4](food_quan) [Pizza Bò](food_type) size [M](food_size)
-      - đặt [Pizza Bò](food_type) size [M](food_size) với số lượng [5](food_quan)
-      - đặt [Pizza Thập Cẩm ](food_type) size [L](food_size) với số lượng [bảy](food_quan)
-      - order [mười một](food_quan) [Pizza Bò](food_type) size [L](food_size)
+      - cho mình [mười](food_quan) [khoai tây chiên](food_type) size [M](food_size)
+      - tôi muốn đặt [một](food_quan) [pizza bò ](food_type) size [L](food_size)
+      - tôi muốn đặt [hai](food_quan) [pizza bò](food_type) size [M](food_size)
+      - tôi muốn đặt [1](food_quan) [pizza xúc xích](food_type) size [L](food_size)
+      - tôi muốn đặt [2](food_quan) [pizza hải sản](food_type) size [M](food_size)
+      - cho tôi [một](food_quan) [pizza bò](food_type)
+      - tôi muốn order [mười lăm](food_quan) [pizza bò](food_type) size [L](food_size)
+      - tôi muốn order [mười hai](food_quan) [pizza bò ](food_type) size [M](food_size)
+      - tôi muốn order [3](food_quan) [pizza xúc xích](food_type) size [L](food_size)
+      - tôi muốn order [4](food_quan) [pizza bò](food_type) size [M](food_size)
+      - đặt [pizza bò](food_type) size [M](food_size) với số lượng [5](food_quan)
+      - đặt [pizza bò ](food_type) size [L](food_size) với số lượng [bảy](food_quan)
+      - order [mười một](food_quan) [pizza bò](food_type) size [L](food_size)
       
-      - bạn order giúp chị [mười](food_quan) [Khoai Tây Chiên](food_type) nhé
-      - bạn order [mười một](food_quan) [Pizza Thập Cẩm ](food_type) giúp chị nhé
-      - em order giúp anh [năm](food_quan) [Pizza Bò](food_type) nhé
-      - em order [mười hai](food_quan) [Pizza Xúc Xích](food_type) giúp anh nhé
-      - cho anh [mười ba](food_quan) [Pizza Thập Cẩm ](food_type) nha
-      - anh muốn đặt [Pizza Hải Sản](food_type)
-      - mình muốn order [Pizza Bò](food_type)
-      - cho tui [Pizza Thập Cẩm ](food_type) nha
-      - lấy cho mình [một](food_quan) [Pizza Thập Cẩm ](food_type) nha
-      - cho anh [hai](food_quan) [Pizza Bò](food_type) nha
+      - bạn order giúp chị [mười](food_quan) [khoai tây chiên](food_type) nhé
+      - bạn order [mười một](food_quan) [pizza bò ](food_type) giúp chị nhé
+      - em order giúp anh [năm](food_quan) [pizza bò](food_type) nhé
+      - em order [mười hai](food_quan) [pizza xúc xích](food_type) giúp anh nhé
+      - cho anh [mười ba](food_quan) [pizza bò ](food_type) nha
+      - anh muốn đặt [pizza hải sản](food_type)
+      - mình muốn order [pizza bò](food_type)
+      - cho tui [pizza bò ](food_type) nha
+      - lấy cho mình [một](food_quan) [pizza bò ](food_type) nha
+      - cho anh [hai](food_quan) [pizza bò](food_type) nha
   - intent: inform
     examples: |
-      - [Pizza Thập Cẩm](food_type)
-      - [Pizza Bò](food_type)
-      - [Pizza Xúc Xích](food_type)
-      - [Pizza Hải Sản](food_type)
-      - [Pizza Thập Cẩm](food_type)
+      - [pizza bò](food_type)
+      - [pizza bò](food_type)
+      - [pizza xúc xích](food_type)
+      - [pizza hải sản](food_type)
+      - [pizza bò](food_type)
       - pizza gì cũng được
       - size [M](food_size)
       - size [L](food_size)
